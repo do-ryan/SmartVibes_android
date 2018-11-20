@@ -9,6 +9,10 @@ var app = {};
  * Data that is plotted on the canvas.
  */
 app.dataPoints = [];
+// dataPoints stores only datapoints to be plotted on canvas
+
+app.allData = [];
+// allData stores all datapoints collected during the run
 
 /**
  * Timeout (ms) after which a message is shown if the SensorTag wasn't found.
@@ -229,7 +233,8 @@ app.startAccelerometerNotification = function(device)
 		{
 			app.showInfo('Status: Data stream active - accelerometer');
 			var dataArray = new Uint8Array(data);
-			var values = app.getAccelerometerValues(dataArray);
+			var values = app.getAccelerometerValues(dataArray); // sample one set of accelerometer values
+			app.allData.push(values); // add to allData array
 			app.drawDiagram(values);
 		},
 		function(errorCode)
@@ -306,9 +311,9 @@ app.drawDiagram = function(values)
 	context.clearRect(0, 0, canvas.width, canvas.height);
 
 	// Draw lines.
-	drawLine('x', '#f00');
-	drawLine('y', '#0f0');
-	drawLine('z', '#00f');
+	drawLine('x', #005A9C);
+	drawLine('y', #ff6347);
+	drawLine('z', #E6A817);
 };
 
 // Initialize the app.
