@@ -1,0 +1,53 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"BLE\"><param name=\"ios-package\" value=\"EVOBLE\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "UIBackgroundModes": [
+            {
+              "xml": "<array><string>bluetooth-central</string></array>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.evothings.ble"
+    },
+    "cordova-plugin-ble": {
+      "PACKAGE_NAME": "com.evothings.ble"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-ble.BLE",
+      "file": "plugins/cordova-plugin-ble/ble.js",
+      "pluginId": "cordova-plugin-ble",
+      "clobbers": [
+        "evothings.ble"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-ble": "2.0.1"
+  }
+}
