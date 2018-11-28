@@ -21,8 +21,8 @@
             "cordova-plugin-ble": {}
         },
         "platforms": [
-            "ios",
-            "android"
+            "android",
+            "ios"
         ]
     }
 }
