@@ -231,7 +231,9 @@ app.startAccelerometerNotification = function(device)
 			app.showInfo('Status: Data stream active - accelerometer');
 			var dataArray = new Uint8Array(data);
 			var values = app.getAccelerometerValues(dataArray);
+			document.getElementById('arms').innerHTML = 0;
 			app.drawDiagram(values);
+			app.rmsAccel(values);
 		},
 		function(errorCode)
 		{
@@ -256,6 +258,20 @@ app.getAccelerometerValues = function(data)
 	// Return result.
 	return { x: ax, y: ay, z: az };
 };
+
+/** Calculate root mean square acceleration **/
+
+app.rmsAccel = function()
+{
+	app.allData.push(values);
+	cum_arms = 0;
+	for (var i = 0, i < allData.length; i++){
+		cum_arms = cum_arms + allData[i];
+	}
+	cum_arms = cum_arms / allData.length;
+	document.getElementById('arms').innerHTML = cum_arms;
+
+}
 
 /**
  * Plot diagram of sensor values.

@@ -9,11 +9,11 @@
         "parents": {
           "/*": [
             {
-              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"BLE\"><param name=\"android-package\" value=\"com.evothings.BLE\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<feature name=\"BLE\"><param name=\"android-package\" value=\"com.evothings.BLE\" /></feature>",
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             }
           ]
@@ -40,10 +40,10 @@
     }
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-ble": {
       "PACKAGE_NAME": "com.evothings.ble"
     },
-    "cordova-plugin-ble": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.evothings.ble"
     }
   },
@@ -59,7 +59,7 @@
     }
   ],
   "plugin_metadata": {
-    "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-ble": "2.0.1"
+    "cordova-plugin-ble": "2.0.1",
+    "cordova-plugin-whitelist": "1.3.3"
   }
 }
