@@ -59,21 +59,23 @@
 
 	<h1>SmartVibes</h1>
 
-	<div id='d2' style="position:absolute; top:300px; left:50px; z-index:1">
+	<div id='d2' style="position:absolute; top:275px; left:15px; z-index:1">
 		<p id="info">Not Connected</p>
 
-		<button onclick="app.onStartButton()" class="green">START</button>
-		<button onclick="app.onStopButton()" class="red">STOP</button>
+		<button onclick="app.onStartButton()" class="blue">Start</button>
+		<button onclick="app.onStopButton()" class="red">Stop</button>
 	</div>
 		
 		<div id='d1' style="position:absolute; top:0px; left:0px; z-index:1">  
 			<canvas id="canvas" width="400" height="250"></canvas>
-			<div style="position:relative; top:-100px; left:0px; z-index:1">
+			<div style="position:absolute; top:155px; left:300px; z-index:1">
 			<p id=legendx style="color:#005A9C;">X axis</p>
-			<p id=legendy style="color:#ff6347;">Y axis</p>
+			<p id=legendy style="color:#ff6347;">Y axis</p> <!-- red -->
 			<p id=legendz style="color:#E6A817;">Z axis</p>
 			</div>
 		</div>
+
+	<p class=result>Cumulative Vibration Intensity Level</p>
 
 	<section id='information'>
 

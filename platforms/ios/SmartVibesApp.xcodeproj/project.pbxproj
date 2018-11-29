@@ -16,8 +16,8 @@
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		366EB82EE90B4E99A0F8AE8C /* EVOBLE.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6650AEB1484E8F9CB4F808 /* EVOBLE.m */; };
-		D2939F17FB1B47E29B54BBA1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD76E921214E958945A12C /* CoreBluetooth.framework */; };
+		33984584454A4AEFA72F5FA2 /* EVOBLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F95DB9157DE426BAE9E1A57 /* EVOBLE.m */; };
+		E6259D0CFBC04666AD513D85 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6D066FD951459C93EDB4DD /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,9 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "SmartVibesApp/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		AC6650AEB1484E8F9CB4F808 /* EVOBLE.m */ = {isa = PBXFileReference; name = "EVOBLE.m"; path = "cordova-plugin-ble/EVOBLE.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		D8FAAD5A06A4450E91DB5335 /* EVOBLE.h */ = {isa = PBXFileReference; name = "EVOBLE.h"; path = "cordova-plugin-ble/EVOBLE.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		1CCD76E921214E958945A12C /* CoreBluetooth.framework */ = {isa = PBXFileReference; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9F95DB9157DE426BAE9E1A57 /* EVOBLE.m */ = {isa = PBXFileReference; name = "EVOBLE.m"; path = "cordova-plugin-ble/EVOBLE.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		BDC5A74E10EB4D5DAA2182D0 /* EVOBLE.h */ = {isa = PBXFileReference; name = "EVOBLE.h"; path = "cordova-plugin-ble/EVOBLE.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		CA6D066FD951459C93EDB4DD /* CoreBluetooth.framework */ = {isa = PBXFileReference; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				D2939F17FB1B47E29B54BBA1 /* CoreBluetooth.framework in Frameworks */,
+				E6259D0CFBC04666AD513D85 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +140,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CCD76E921214E958945A12C /* CoreBluetooth.framework */,
+				CA6D066FD951459C93EDB4DD /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,8 +166,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				AC6650AEB1484E8F9CB4F808 /* EVOBLE.m */,
-				D8FAAD5A06A4450E91DB5335 /* EVOBLE.h */,
+				9F95DB9157DE426BAE9E1A57 /* EVOBLE.m */,
+				BDC5A74E10EB4D5DAA2182D0 /* EVOBLE.h */,
 			);
 			name = Plugins;
 			path = "SmartVibesApp/Plugins";
@@ -280,7 +280,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				366EB82EE90B4E99A0F8AE8C /* EVOBLE.m in Sources */,
+				33984584454A4AEFA72F5FA2 /* EVOBLE.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

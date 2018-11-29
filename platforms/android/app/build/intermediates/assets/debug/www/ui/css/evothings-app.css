@@ -21,9 +21,13 @@ html, body {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 body {
-	margin: 0 0.9em 0 0.9em;
+	margin: 0;
 	font-size: 150%;
 	font-size: 7.5vw;
+}
+
+p {
+	margin: 0;
 }
 
 /* Add a top margin to the content corresponding to the height of the header. */
@@ -47,7 +51,11 @@ section::after {
 	height: 1em;
 }
 
-
+.result {
+	top:350px;
+	left:15px;
+	position:relative;
+}
 
 
 /*  ----------------------------------------------------------
@@ -357,7 +365,7 @@ input.btn-group + label,
 	display: inline-block;
 	box-sizing: border-box; /* Width & height includes padding & border. */
 
-	font-family: 'Proxima Nova Black';
+	font-family: 'Proxima Nova Regular';
 	font-size: inherit;
 	line-height: 100%;
 	text-align: center;
@@ -584,10 +592,10 @@ article {
 /*  Color: "Soft Red"
 	Class name: red
     ---------------- */
-.color_softred { color: #e15a64; }
+.color_softred { color: #E6A817; }
 .bg_red, input.red, button.red, ul.red li, label.red,
 input.red + label {
-	background-color: #e15a64;
+	background-color: #E6A817;
 }
 /* Downpressed button. */
 button.red:active, button.red.pressed,
@@ -638,10 +646,10 @@ input.btn-group.green:checked + label {
 /*  Color: "Blue Hue"
 	Clas name: blue
     ------------------ */
-.color_bluehue { color: #6bc6ce; }
+.color_bluehue { color: #005A9C; }
 .bg_blue, input.blue, button.blue, ul.blue li, label.blue,
 input.blue + label {
-	background-color: #6bc6ce;
+	background-color: #005A9C;
 }
 /* Downpressed button. */
 button.blue:active, button.blue.pressed,
