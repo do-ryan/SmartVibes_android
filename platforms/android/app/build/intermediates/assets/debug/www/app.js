@@ -231,6 +231,11 @@ app.startAccelerometerNotification = function(device)
 			app.showInfo('Status: Data stream active - accelerometer');
 			var dataArray = new Uint8Array(data);
 			var values = app.getAccelerometerValues(dataArray);
+
+			app.allData.push(values);
+			// add to all data array
+
+			app.rmsAccel(values);
 			app.drawDiagram(values);
 		},
 		function(errorCode)
@@ -239,11 +244,25 @@ app.startAccelerometerNotification = function(device)
 		});
 };
 
+app.rmsAccel = function(values)
+{
+	var CONV_TO_MS2 = 36.52
+	var cum_arms = 0;
+	for (var i = 0; i < app.allData.length; i++){
+		cum_arms = cum_arms + app.allData[i]['x'] + app.allData[i]['y'] + app.allData[i]['z'];
+	}
+
+	cum_arms = cum_arms * CONV_TO_MS2 / (app.allData.length*3);
+
+	document.getElementById('arms').innerHTML = cum_arms;
+}
+
 /**
  * Calculate accelerometer values from raw data for SensorTag 2.
  * @param data - an Uint8Array.
  * @return Object with fields: x, y, z.
  */
+
 app.getAccelerometerValues = function(data)
 {
 	var divisors = { x: -16384.0, y: 16384.0, z: -16384.0 };
