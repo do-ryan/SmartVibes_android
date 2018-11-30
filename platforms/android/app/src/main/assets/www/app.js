@@ -11,6 +11,9 @@ var app = {};
 app.dataPoints = [];
 app.allData = [];
 
+app.last_sampled_time = 0;
+
+
 /**
  * Timeout (ms) after which a message is shown if the SensorTag wasn't found.
  */
@@ -231,9 +234,13 @@ app.startAccelerometerNotification = function(device)
 			app.showInfo('Status: Data stream active - accelerometer');
 			var dataArray = new Uint8Array(data);
 			var values = app.getAccelerometerValues(dataArray);
+			var d = new Date();
+
+			//document.getElementById('period').innerHTML = d.getTime() - app.last_sampled_time;
+			//app.last_sampled_time = app.d.getTime();
 
 			app.allData.push(values);
-			// add to all data array
+			//add to all data array
 
 			app.rmsAccel(values);
 			app.drawDiagram(values);
@@ -245,17 +252,26 @@ app.startAccelerometerNotification = function(device)
 };
 
 app.rmsAccel = function(values)
+// arms = sqrt(1/T * integral_0_to_T (a_z^2*dt))
 {
-	var CONV_TO_MS2 = 36.52
+	var CONV_TO_MS2 = 36.52 // this needs to be properly determined
 	var cum_arms = 0;
 	for (var i = 0; i < app.allData.length; i++){
-		cum_arms = cum_arms + app.allData[i]['x'] + app.allData[i]['y'] + app.allData[i]['z'];
+		cum_arms = cum_arms + app.allData[i]['z']; // just takes z for now
 	}
 
-	cum_arms = cum_arms * CONV_TO_MS2 / (app.allData.length*3);
+	cum_arms = cum_arms * CONV_TO_MS2 / (app.allData.length);
 
 	document.getElementById('arms').innerHTML = cum_arms;
 }
+
+/*app.integrate = function(vector, timestep)
+{
+	var integral = 0;
+	for (var i = 0; i < sampled_acc.length - 1; i++){
+		integral = integral + sampled_acc[i+1];
+	}
+}*/
 
 /**
  * Calculate accelerometer values from raw data for SensorTag 2.

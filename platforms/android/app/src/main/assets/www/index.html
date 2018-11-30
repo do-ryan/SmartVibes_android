@@ -58,21 +58,22 @@
 	</header>
 		
 		<div id='d1' style="position:absolute; top:0vh; left:0vw; z-index:1">  
-			<canvas id="canvas" width=800px	height=550px></canvas>
-			<div style="position:absolute; top:25vh; left:80vw; z-index:1">
+			<canvas id="canvas" width=775vw	height=600px></canvas>
+			<div style="position:absolute; top:15vh; left:80vw; z-index:1">
+			<p id=period>Sample period</p>
 			<p id=legendx style="color:#005A9C;">X axis</p>
 			<p id=legendy style="color:#ff6347;">Y axis</p> <!-- red -->
 			<p id=legendz style="color:#E6A817;">Z axis</p>
 			</div>
 		</div>
-		<div id='d2' style="position:absolute; top:50vh; left:10vw; z-index:1">
+		<div id='d2' style="position:absolute; top:55vh; left:10vw; z-index:1">
 			<p id="info">Not Connected</p>
 
 			<button onclick="app.onStartButton()" class="blue">Start</button>
 			<button onclick="app.onStopButton()" class="red">Pause</button>
 		</div>
-		<div id='d2' style="position:absolute; top:50vh; left:10vw; z-index:1">
-			<p class=result>Cumulative RMS Acceleration</p>
+		<div id='d2' style="position:absolute; top:55vh; left:10vw; z-index:1">
+			<p class=result>Cumulative RMS Accel. (m/s^2)</p>
 			<p class=result id=arms>0.0</p>
 		</div>
 
