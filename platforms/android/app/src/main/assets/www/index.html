@@ -58,23 +58,35 @@
 	</header>
 		
 		<div id='d1' style="position:absolute; top:0vh; left:0vw; z-index:1">  
-			<canvas id="canvas" width=775vw	height=600px></canvas>
-			<div style="position:absolute; top:15vh; left:80vw; z-index:1">
-			<p id=period>Sample period</p>
-			<p id=legendx style="color:#005A9C;">X axis</p>
-			<p id=legendy style="color:#ff6347;">Y axis</p> <!-- red -->
-			<p id=legendz style="color:#E6A817;">Z axis</p>
+			<canvas id="canvas" width=770vw	height=600px></canvas>
+			<div style="position:absolute; top:25vh; left:70vw; z-index:1">
+			<p class=legend id=period>Sampling period (ms)</p>
+			<p class=legend id=zacc>Z acceleration (m/s<sup>2</sup>)</p>
+			<p class=legend id=legendx style="color:#005A9C;">X axis</p>
+			<p class=legend id=legendy style="color:#ff6347;">Y axis</p> <!-- red -->
+			<p class=legend id=legendz style="color:#E6A817;">Z axis</p>
 			</div>
 		</div>
-		<div id='d2' style="position:absolute; top:55vh; left:10vw; z-index:1">
-			<p id="info">Not Connected</p>
-
-			<button onclick="app.onStartButton()" class="blue">Start</button>
-			<button onclick="app.onStopButton()" class="red">Pause</button>
+		<div id='d2' style="position:absolute; top:50vh; left:5vw; z-index:0.2">
+			<p class=status id="info">Not Connected</p>
 		</div>
-		<div id='d2' style="position:absolute; top:55vh; left:10vw; z-index:1">
-			<p class=result>Cumulative RMS Accel. (m/s^2)</p>
+		<div id='d3' style="position:absolute; top:85vh; left:3vw; z-index:0.2">
+			<button onclick="app.onStartButton()" class="blue">Start</button>
+			<button onclick="app.onPauseButton()" class="yellow">Pause</button>
+			<button onclick="app.onStopButton()" class="red">Stop</button>
+			<button onclick="app.onTareButton()" class="green">Tare</button>
+		</div>
+		<div id='d4' style="position:absolute; top:25vh; left:5vw; z-index:1">
+			<p class=result>Cumulative RMS Accel. (m/s<sup>2</sup>)</p>
 			<p class=result id=arms>0.0</p>
+			<p class=result>Vibration Dose Value (m/s<sup>1.75</sup>)</p>
+			<p class=result id=vdv>0.0</p>
+			<p class=result>Crest Factor</p>
+			<p class=result id=cf>0.0</p>
+		</div>
+		<div id='d5' style="position:absolute; top:55vh; left:65vw; z-index:1">
+			<p class=risklevel>Overall Vibration Level</p>
+			<p class=risklevel id=risk>0.0</p>
 		</div>
 
 	<section id='information'>

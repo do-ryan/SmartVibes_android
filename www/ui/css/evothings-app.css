@@ -54,8 +54,25 @@ section::after {
 .result {
 	top:350px;
 	left:15px;
+	font-size:40%;
 	position:relative;
 }
+
+.status {
+	font-size:30%;
+}
+
+.legend {
+	font-size:30%;
+}
+
+.blue, .yellow, .red, .green{
+	height:10vh;
+	width:22vw;
+	font-size:70%;
+}
+
+
 
 
 /*  ----------------------------------------------------------
@@ -433,7 +450,7 @@ input.btn-group + label.quarter {
 button.wide,
 input.btn-group.wide + label,
 input.btn-group + label.wide {
-	width: 100%;
+	width: 75%;
 }
 
 button.big,
